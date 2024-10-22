@@ -25,6 +25,7 @@ body {
     line-height: 1.6;
     scroll-behavior: smooth;
 }
+
 .container {
     width: 90%;
     margin: 0 auto;
@@ -40,36 +41,45 @@ body {
     padding: 10px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 #navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 #navbar .logo {
     font-size: 1.8rem;
     color: var(--text-color);
 }
+
 #navbar .nav-links {
     list-style: none;
     display: flex;
+
 }
+
 #navbar .nav-links li {
     margin-left: 20px;
 }
+
 #navbar .nav-links li a {
     color: var(--text-color);
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.3s ease;
 }
+
 #navbar .nav-links li a:hover {
     color: var(--primary-color);
 }
+
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
 }
+
 .hamburger span {
     height: 3px;
     width: 25px;
@@ -110,22 +120,27 @@ body {
     align-items: center;
     text-align: center;
 }
+
 .hero-content {
     max-width: 800px;
     animation: fadeIn 2s ease-in-out;
 }
+
 .hero-content h1 span {
     color: #ff9800;
     /* Highlight your name in orange */
 }
+
 #hero h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
+
 #hero p {
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
+
 #hero .btn {
     background-color: var(--primary-color);
     color: var(--text-color);
@@ -134,14 +149,20 @@ body {
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
+
 #hero .btn:hover {
     background-color: #e68900;
 }
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* About Section */
@@ -152,6 +173,7 @@ body {
     color: #fff;
     text-align: center;
 }
+
 .about h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
@@ -159,21 +181,25 @@ body {
     border: none;
     /* Orange heading */
 }
-#about:hover h2{
+
+#about:hover h2 {
     border-left: #ff9800 1px solid;
     border-right: #ff9800 1px solid;
 }
+
 .about-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 .about-image {
     flex: 1;
     margin-right: 40px;
     text-align: center;
 }
+
 .about-image img {
     width: 200px;
     height: 200px;
@@ -182,19 +208,23 @@ body {
     /* Orange border around image */
     object-fit: cover;
 }
+
 .about-text {
     flex: 2;
     text-align: left;
 }
+
 .about-text p {
     font-size: 1.1rem;
     margin-bottom: 20px;
     line-height: 1.8;
 }
+
 .about-text span {
     color: var(--primary-color);
     /* Highlight your name */
 }
+
 .btn-primary {
     display: inline-block;
     background-color: var(--primary-color);
@@ -205,6 +235,7 @@ body {
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
+
 .btn-primary:hover {
     background-color: #e68900;
     /* Slightly darker hover effect */
@@ -229,47 +260,62 @@ body {
 /* Skills Section */
 .skills {
     padding: 80px 0;
-    background-color: var(--bg-darkdray); /* Dark background for the section */
+    background-color: var(--bg-darkdray);
+    /* Dark background for the section */
     color: #fff;
     text-align: center;
 }
+
 .skills h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: #ff9800; /* Orange heading */
+    color: #ff9800;
+    /* Orange heading */
     border: none;
 }
-.skills:hover h2{
+
+.skills:hover h2 {
     border-left: #ff9800 1px solid;
     border-right: #ff9800 1px solid;
 }
+
 .skill-list {
     max-width: 600px;
     margin: 0 auto;
-    text-align: left; /* Align text to the left for better readability */
+    text-align: left;
+    /* Align text to the left for better readability */
 }
+
 .skill-item {
     margin-bottom: 20px;
     transition: transform 0.3s ease;
     position: relative;
 }
-.skill-item:hover{
+
+.skill-item:hover {
     transform: scale(1.05);
 }
+
 .skill-item h4 {
     font-size: 1.2rem;
     margin-bottom: 5px;
 }
+
 .skill-bar {
-    background-color: #3e2c2c; /* Dark background for the skill bars */
+    background-color: #3e2c2c;
+    /* Dark background for the skill bars */
     border-radius: 5px;
-    overflow: hidden; /* Prevents child elements from overflowing */
+    overflow: hidden;
+    /* Prevents child elements from overflowing */
 }
+
 .skill-fill {
     height: 20px;
-    background-color: #ff9800; /* Orange fill for skill progress */
+    background-color: #ff9800;
+    /* Orange fill for skill progress */
     border-radius: 5px;
-    transition: width 0.5s ease; /* Smooth transition for skill fill */
+    transition: width 0.5s ease;
+    /* Smooth transition for skill fill */
 }
 
 /* For mobile screens */
@@ -277,9 +323,11 @@ body {
     .skills {
         padding: 50px 0;
     }
+
     .skills h2 {
         font-size: 2rem;
     }
+
     .skill-item h4 {
         font-size: 1rem;
     }
@@ -291,22 +339,26 @@ body {
     background-color: var(--bg-lightgray);
     text-align: center;
 }
+
 #projects h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #ff9800;
     border: none;
-    
+
 }
-#projects:hover h2{
+
+#projects:hover h2 {
     border-left: #ff9800 1px solid;
     border-right: #ff9800 1px solid;
 }
+
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .project {
     background-color: var(--bg-darkdray);
     padding: 20px;
@@ -315,50 +367,108 @@ body {
     transition: transform 0.3s ease;
     max-width: 350px;
 }
+
 .project:hover {
     transform: scale(1.05);
 }
 
 /* Course Section */
-#Course{
-
+#Course {
     text-align: center;
     padding: 80px 0;
     background-color: var(--bg-darkdray);
 }
+
 #Course h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #ff9800; /* Your desired heading color */
+    color: #ff9800;
+    /* Your desired heading color */
 }
-#Course:hover h2{
+
+#Course:hover h2 {
     border-left: #ff9800 1px solid;
     border-right: #ff9800 1px solid;
 }
-.course-topics{
+
+.course-topics {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* if screen size reduce div to become horizondal */ 
+    flex-wrap: wrap;
+    /* if screen size reduce div to become horizondal */
 }
-.course-topic{
+
+.course-topic {
     background-color: var(--bg-lightgray);
     padding: 20px;
     margin: 10px;
     border-radius: 5px;
     max-width: 350px;
 }
-.course-topic:hover h3{
-    color: #ff9800;
+
+.course-topic:hover {
+    border: wheat 1px solid;
 }
-.course-topic ul li{
+
+.course-topic:hover h4 {
+    color: var(--hover-color);
+}
+
+.course-topic ul li {
     transition: transform 0.4s ease;
 }
-.course-topic ul:hover li{
+
+.course-topics :hover li {
     transform: scale(1.1);
 }
-#Course li{
+
+#Course li {
     list-style: none;
     text-align: center;
+}
+
+/* Experience */
+#Experience {
+    padding: 100px 0;
+}
+
+#Experience h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #ff9800;
+    text-align: center;
+}
+
+#Experience:hover h2 {
+    border-left: #ff9800 1px solid;
+    border-right: #ff9800 1px solid;
+}
+
+.experience-item {
+
+}
+.link a{
+    display:inline-block;
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 2px;
+    color: #ff9800;
+}
+.link a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    transition: width 0.5s ease;  /* Slow effect */
+    background-color: #ff9800;
+}
+.link a:hover::after { 
+    width: 100%;
+} /* Line expands on hover */
+.experience-item:hover h3 {
+    color: var(--hover-color);
 }
 
 /* Contact Section */
@@ -368,26 +478,38 @@ body {
     text-align: center;
     background-color: var(--bg-lightgray);
 }
+
 #contact h2 {
     margin-bottom: 20px;
-    color: #ff9800; /* Your desired heading color */
+    color: #ff9800;
+    /* Your desired heading color */
 }
-#contact:hover h2{
+
+#contact:hover h2 {
     border-left: #ff9800 1px solid;
     border-right: #ff9800 1px solid;
 }
+
 .contact-info {
-    text-align:start;
-    margin-top: 20px; /* Space between form and contact info */
-    font-size: 1rem; /* Adjust font size for contact info */
-    color: #ffffff; /* Change text color for visibility in dark theme */
+    text-align: start;
+    margin-top: 20px;
+    /* Space between form and contact info */
+    font-size: 1rem;
+    /* Adjust font size for contact info */
+    color: #ffffff;
+    /* Change text color for visibility in dark theme */
 }
+
 .contact-info a {
-    color: #ff9800; /* Link color */
-    text-decoration: none; /* Remove underline */
+    color: #ff9800;
+    /* Link color */
+    text-decoration: none;
+    /* Remove underline */
 }
+
 .contact-info a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline;
+    /* Underline on hover */
 }
 
 /* Footer */
@@ -396,9 +518,11 @@ footer {
     padding: 20px;
     background-color: (--bg-color);
 }
+
 footer p {
     margin-bottom: 10px;
 }
+
 .social-links a {
     font-size: 1.1rem;
     color: #ff9800;
@@ -406,6 +530,7 @@ footer p {
     text-decoration: none;
     transition: color 0.3s ease;
 }
+
 .social-links a:hover {
     color: var(--primary-color);
 }
