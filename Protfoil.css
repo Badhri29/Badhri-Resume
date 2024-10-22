@@ -372,68 +372,62 @@ body {
     transform: scale(1.05);
 }
 
+/* ---------------------------------------------------------- */
 /* Course Section */
 #Course {
     text-align: center;
     padding: 80px 0;
     background-color: var(--bg-darkdray);
 }
-
 #Course h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #ff9800;
     /* Your desired heading color */
 }
-
 #Course:hover h2 {
     border-left: #ff9800 1px solid;
     border-right: #ff9800 1px solid;
 }
-
-.course-topics {
+.CourseTopic {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    /* if screen size reduce div to become horizondal */
+    justify-content: center;
 }
-
-.course-topic {
+.CourseSubTopic{
     background-color: var(--bg-lightgray);
     padding: 20px;
     margin: 10px;
     border-radius: 5px;
-    max-width: 350px;
+    transition: transform 0.3s ease;
+    width: 350px;
 }
-
-.course-topic:hover {
-    border: wheat 1px solid;
+.CourseSubTopic:hover {
+    border: wheat 1px solid; /* hover to create div border for FD BD */ 
 }
-
-.course-topic:hover h4 {
-    color: var(--hover-color);
+.CourseSubTopic:hover h4 {
+    color: var(--hover-color); /* hover to change heading color for FD BD */ 
 }
-
-.course-topic ul li {
+.CourseSubTopic ul li {
     transition: transform 0.4s ease;
 }
-
-.course-topics :hover li {
+.CourseTopic :hover li {
     transform: scale(1.1);
 }
-
 #Course li {
     list-style: none;
     text-align: center;
 }
 
+/* ---------------------------------------------------------- */
 /* Experience */
 #Experience {
     padding: 100px 0;
+    background-color: var(--bg-lightgray);
 }
 
 #Experience h2 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 2rem;
     color: #ff9800;
     text-align: center;
@@ -443,9 +437,9 @@ body {
     border-left: #ff9800 1px solid;
     border-right: #ff9800 1px solid;
 }
-
-.experience-item {
-
+.experience-item h3{
+    text-align: center;
+    margin-bottom: 5px;
 }
 .link a{
     display:inline-block;
@@ -476,7 +470,7 @@ body {
     font-size: 1.5rem;
     padding: 100px 0;
     text-align: center;
-    background-color: var(--bg-lightgray);
+    background-color: var(--bg-darkdray);
 }
 
 #contact h2 {
