@@ -18,15 +18,18 @@
     box-sizing: border-box;
     font-family: var(--font-family);
 }
-a{
+
+a {
     text-decoration: none;
 }
+
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
     scroll-behavior: smooth;
 }
+
 .container {
     width: 90%;
     margin: 0 auto;
@@ -34,47 +37,58 @@ body {
 
 /*-------------------------- Navigation Bar-------------------------- */
 header {
-    background-color: var(--bg-darkdray); /* Example background color */
+    background-color: var(--bg-darkdray);
+    /* Example background color */
     padding: 10px;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
-    max-height: 70px;
+    max-height: 60px;
 }
+
 .menu-btn {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Vertically centers the content */
+    align-items: center;
+    /* Vertically centers the content */
 }
+
 .menu-btn h1 {
     margin-left: 5%;
     font-size: 30px;
     color: white;
 }
+
 .menu-btn label {
     margin-right: 30px;
 }
+
 .menu-btn label svg {
-    width: 30px; /* Adjust size if necessary */
+    width: 30px;
+    /* Adjust size if necessary */
     height: 30px;
-    fill: white; /* Adjust color */
+    fill: white;
+    /* Adjust color */
     cursor: pointer;
 }
 
 /* -------------------------- checkbox -------------------------- */
-#nav-check{
+#nav-check {
     display: none;
 }
-#nav-check:checked ~.navbar{
+
+#nav-check:checked~.navbar {
     transform: translateX(0);
 }
 
-/* ----------------------------- overlay ----------------------------- */
-#nav-check:checked ~ .overlay{
+
+/* --------------------------- overlay --------------------------- */
+#nav-check:checked~.overlay {
     display: block;
 }
-.overlay{
+
+.overlay {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -84,65 +98,69 @@ header {
     display: none;
 }
 
-/* ------------------------------ Navbar ------------------------------ */
+/* ---------------------------- Navbar ---------------------------- */
 /* ******** Navbar Header ******** */
-.navbar{
+.navbar {
     position: fixed;
-    background-color: var(--bg-darkdray);
+    background-color: rgba(0, 0, 0, 0.5);
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
-    transform: translateX(100%);
+    transform: translateX(120%);
     z-index: 1;
     /*syntax = transition: property, duration, timing-function, delay; */
-    transition: 0.6s ease; 
+    transition: 0.6s ease;
 }
-.navbar-header{
+.navbar-header {
     position: relative;
 }
-.nav-close{
+.nav-close {
     position: absolute;
-    right: 85%;
+    right: 15%;
     margin-top: 15px;
 }
-.nav-close svg{
+.nav-close svg {
     cursor: pointer;
     transition: all 0.3s linear;
     height: 32px;
     width: 32px;
 }
-.nav-close:hover svg{
-    fill : rgb(0, 0, 0)
+.nav-close:hover svg {
+    fill : orange
 }
+
 /* ******** Navbar List ******** */
-.navbarList{
+.navbarList {
     list-style-type: none;
     padding: 0;
-    margin-top: 20%;
-    border-top: #ff9800 2px dashed;
+    margin-top: 70px;
 }
-.nav-link{
+
+.nav-link {
     display: block;
     color: white;
     text-transform: uppercase;
     font-size: 1.2rem;
     padding: 0.75rem 1rem;
     transition: all 0.3s linear;
+    /* background-color: rgba(255, 255, 255, 0.1); */
 }
-.nav-link:hover{
+
+.nav-link:hover {
     background-color: blanchedalmond;
     color: black;
     font-weight: bold;
     padding-left: 1.5rem;
     border-left: 0.5rem solid orange;
 }
-@media  screen and (min-width:600px) {
-    .navbar{
+
+@media screen and (min-width:300px) {
+    .navbar {
         width: 35%;
         max-width: 25rem;
     }
-    
+
 }
 
 /* ------------------------------ Hero Section ------------------------------ */
@@ -154,22 +172,27 @@ header {
     align-items: center;
     text-align: center;
 }
+
 .hero-content {
     max-width: 800px;
     animation: fadeIn 2s ease-in-out;
 }
+
 .hero-content h1 span {
     color: #ff9800;
     /* Highlight your name in orange */
 }
+
 #hero h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
+
 #hero p {
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
+
 #hero .btn {
     background-color: var(--primary-color);
     color: var(--text-color);
@@ -178,9 +201,11 @@ header {
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
+
 #hero .btn:hover {
     background-color: #e68900;
 }
+
 /* Animations */
 @keyframes fadeIn {
     from {
@@ -200,6 +225,7 @@ header {
     color: #fff;
     text-align: center;
 }
+
 .about h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
@@ -207,21 +233,25 @@ header {
     border: none;
     /* Orange heading */
 }
+
 #about:hover h2 {
     border-left: #ff9800 1px solid;
     border-right: #ff9800 1px solid;
 }
+
 .about-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 .about-image {
     flex: 1;
     margin-right: 40px;
     text-align: center;
 }
+
 .about-image img {
     width: 200px;
     height: 200px;
@@ -230,19 +260,23 @@ header {
     /* Orange border around image */
     object-fit: cover;
 }
+
 .about-text {
     flex: 2;
     text-align: left;
 }
+
 .about-text p {
     font-size: 1.1rem;
     margin-bottom: 20px;
     line-height: 1.8;
 }
+
 .about-text span {
     color: var(--primary-color);
     /* Highlight your name */
 }
+
 .btn-primary {
     display: inline-block;
     background-color: var(--primary-color);
@@ -253,10 +287,12 @@ header {
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
+
 .btn-primary:hover {
     background-color: #e68900;
     /* Slightly darker hover effect */
 }
+
 /* For mobile screens */
 @media (max-width: 768px) {
     .about-content {
@@ -281,6 +317,7 @@ header {
     color: #fff;
     text-align: center;
 }
+
 .skills h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
@@ -288,28 +325,34 @@ header {
     /* Orange heading */
     border: none;
 }
+
 .skills:hover h2 {
     border-left: #ff9800 1px solid;
     border-right: #ff9800 1px solid;
 }
+
 .skill-list {
     max-width: 600px;
     margin: 0 auto;
     text-align: left;
     /* Align text to the left for better readability */
 }
+
 .skill-item {
     margin-bottom: 20px;
     transition: transform 0.3s ease;
     position: relative;
 }
+
 .skill-item:hover {
     transform: scale(1.05);
 }
+
 .skill-item h4 {
     font-size: 1.2rem;
     margin-bottom: 5px;
 }
+
 .skill-bar {
     background-color: #3e2c2c;
     /* Dark background for the skill bars */
@@ -317,6 +360,7 @@ header {
     overflow: hidden;
     /* Prevents child elements from overflowing */
 }
+
 .skill-fill {
     height: 20px;
     background-color: #ff9800;
@@ -325,6 +369,7 @@ header {
     transition: width 0.5s ease;
     /* Smooth transition for skill fill */
 }
+
 /* For mobile screens */
 @media (max-width: 768px) {
     .skills {
@@ -346,6 +391,7 @@ header {
     background-color: var(--bg-lightgray);
     text-align: center;
 }
+
 #projects h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
@@ -353,15 +399,18 @@ header {
     border: none;
 
 }
+
 #projects:hover h2 {
     border-left: #ff9800 1px solid;
     border-right: #ff9800 1px solid;
 }
+
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .project {
     background-color: var(--bg-darkdray);
     padding: 20px;
@@ -370,6 +419,7 @@ header {
     transition: transform 0.3s ease;
     max-width: 350px;
 }
+
 .project:hover {
     transform: scale(1.05);
 }
@@ -380,22 +430,26 @@ header {
     padding: 80px 0;
     background-color: var(--bg-darkdray);
 }
+
 #Course h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #ff9800;
     /* Your desired heading color */
 }
+
 #Course:hover h2 {
     border-left: #ff9800 1px solid;
     border-right: #ff9800 1px solid;
 }
+
 .CourseTopic {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-.CourseSubTopic{
+
+.CourseSubTopic {
     background-color: var(--bg-lightgray);
     padding: 20px;
     margin: 10px;
@@ -403,18 +457,25 @@ header {
     transition: transform 0.3s ease;
     width: 350px;
 }
+
 .CourseSubTopic:hover {
-    border: wheat 1px solid; /* hover to create div border for FD BD */ 
+    border: wheat 1px solid;
+    /* hover to create div border for FD BD */
 }
+
 .CourseSubTopic:hover h4 {
-    color: var(--hover-color); /* hover to change heading color for FD BD */ 
+    color: var(--hover-color);
+    /* hover to change heading color for FD BD */
 }
+
 .CourseSubTopic ul li {
     transition: transform 0.4s ease;
 }
+
 .CourseTopic :hover li {
     transform: scale(1.1);
 }
+
 #Course li {
     list-style: none;
     text-align: center;
@@ -425,27 +486,32 @@ header {
     padding: 100px 0;
     background-color: var(--bg-lightgray);
 }
+
 #Experience h2 {
     margin-bottom: 10px;
     font-size: 2rem;
     color: #ff9800;
     text-align: center;
 }
+
 #Experience:hover h2 {
     border-left: #ff9800 1px solid;
     border-right: #ff9800 1px solid;
 }
-.experience-item h3{
+
+.experience-item h3 {
     text-align: center;
     margin-bottom: 5px;
 }
-.link a{
-    display:inline-block;
+
+.link a {
+    display: inline-block;
     position: relative;
     text-decoration: none;
     padding-bottom: 2px;
     color: #ff9800;
 }
+
 .link a::after {
     content: '';
     position: absolute;
@@ -453,12 +519,16 @@ header {
     bottom: 0;
     width: 0;
     height: 2px;
-    transition: width 0.5s ease;  /* Slow effect */
+    transition: width 0.5s ease;
+    /* Slow effect */
     background-color: #ff9800;
 }
-.link a:hover::after { 
+
+.link a:hover::after {
     width: 100%;
-} /* Line expands on hover */
+}
+
+/* Line expands on hover */
 .experience-item:hover h3 {
     color: var(--hover-color);
 }
@@ -470,15 +540,18 @@ header {
     text-align: center;
     background-color: var(--bg-darkdray);
 }
+
 #contact h2 {
     margin-bottom: 20px;
     color: #ff9800;
     /* Your desired heading color */
 }
+
 #contact:hover h2 {
     border-left: #ff9800 1px solid;
     border-right: #ff9800 1px solid;
 }
+
 .contact-info {
     text-align: start;
     margin-top: 20px;
@@ -488,12 +561,14 @@ header {
     color: #ffffff;
     /* Change text color for visibility in dark theme */
 }
+
 .contact-info a {
     color: #ff9800;
     /* Link color */
     text-decoration: none;
     /* Remove underline */
 }
+
 .contact-info a:hover {
     text-decoration: underline;
     /* Underline on hover */
@@ -505,9 +580,11 @@ footer {
     padding: 20px;
     background-color: (--bg-color);
 }
+
 footer p {
     margin-bottom: 10px;
 }
+
 .social-links a {
     font-size: 1.1rem;
     color: #ff9800;
@@ -515,6 +592,7 @@ footer p {
     text-decoration: none;
     transition: color 0.3s ease;
 }
+
 .social-links a:hover {
     color: var(--primary-color);
 }

@@ -11,8 +11,9 @@
 <body>
 
     <!-- Navigation Bar/Header Section -->
-     <section id="header">
-        <header>
+    <section id="header">
+
+        <header class="head">
             <nav class="menu-btn">
                 <h1>G Badhrinarayanan</h1>
                 <label for="nav-check">
@@ -47,8 +48,8 @@
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
-     </section>
-     
+    </section>
+
     <!-- Hero Section -->
     <section id="hero">
         <div class="hero-content">
@@ -67,7 +68,8 @@
                     <img src="img/myphoto.jpg" alt="Badhrinarayanan">
                 </div>
                 <div class="about-text">
-                    <p>Hello! I'm <span>Badhrinarayanan</span>, a dedicated web developer with a passion for creating
+                    <p>Hello! I'm <span>Badhrinarayanan</span> <sub>"Bachelor of Engineering"</sub>, a dedicated web
+                        developer with a passion for creating
                         intuitive and dynamic user experiences. With expertise in HTML, CSS, JavaScript, and more, I
                         focus on building responsive websites that solve real-world problems.</p>
                     <p>When I'm not coding, you can find me exploring new technologies or working on personal projects.
@@ -135,7 +137,7 @@
     </section>
 
     <!-- Course Section-->
-     <section id="Course">
+    <section id="Course">
         <div class="container">
             <h2 class="CourseHeading">Course</h2>
             <p class="CourseDescription">I did Software Development Course from <b>Q-Spider Institude</b> Chennai.</p>
@@ -156,21 +158,25 @@
                 </div>
             </div>
         </div>
-     </section>
+    </section>
 
     <!-- Experience Section-->
-     <section id="Experience">
+    <section id="Experience">
         <div class="container">
             <h2>Experience</h2>
             <div class="experience-item">
                 <h3><U>Wipro Infrastructure Engineering</U> - 1y3m</h3>
-                <p>Wipro Hydraulics, the Hydraulics business of Wipro Infrastructure Engineering (WIN), specializes in designing and manufacturing custom built Hydraulic Cylinders for applications in diverse segments of Construction & Earthmoving, Material & Cargo Handling, Forestry, Farm & Agriculture, Mining and Truck Tipping. </p>
+                <p>Wipro Hydraulics, the Hydraulics business of Wipro Infrastructure Engineering (WIN), specializes in
+                    designing and manufacturing custom built Hydraulic Cylinders for applications in diverse segments of
+                    Construction & Earthmoving, Material & Cargo Handling, Forestry, Farm & Agriculture, Mining and
+                    Truck Tipping. </p>
                 <p>Position: Trainee, Quality Department (2021-2022)</p>
                 <p class="link">Website: <a href="http://wiproinfra.com/" target="_blank">wiproinfra.com</a></p>
-                <p class="link">Address: <a href="https://maps.app.goo.gl/2srhPUmSCj2pyDkPA" target="_blank">Sipcot Industrial Park, Irungattukottai, Sriperumbudur C 1, Mevalurkuppam, Tamil Nadu 602105</a></p>
+                <p class="link">Address: <a href="https://maps.app.goo.gl/2srhPUmSCj2pyDkPA" target="_blank">Sipcot
+                        Industrial Park, Irungattukottai, Sriperumbudur C 1, Mevalurkuppam, Tamil Nadu 602105</a></p>
             </div>
         </div>
-     </section>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact">
@@ -179,8 +185,10 @@
             <div class="contact-info">
                 <p>📞 Phone : <a href="tel:9600928195">96009 28195</a></p>
                 <p>✉️ Email : <a href="mailto:badhrinarayanan79@gmail.com">badhrinarayanan79@gmail.com</a></p>
-                <p>🔗 LinkedIn : <a href="https://www.linkedin.com/in/badhrinarayanan29" target="_blank">https://www.linkedin.com/in/badhrinarayanan29</a></p>
-                <p>🔗 Website : <a href="https://badhri29.github.io/Badhri-Resume/" target="_blank">https://badhri29.github.io/Badhri-Resume/</a></p>
+                <p>🔗 LinkedIn : <a href="https://www.linkedin.com/in/badhrinarayanan29"
+                        target="_blank">https://www.linkedin.com/in/badhrinarayanan29</a></p>
+                <p>🔗 Website : <a href="https://badhri29.github.io/Badhri-Resume/"
+                        target="_blank">https://badhri29.github.io/Badhri-Resume/</a></p>
                 <p>🏠 Address : No-5, Barathi Street, NewRailway Station, Kanchipuram - 631502</p>
             </div>
         </div>
@@ -196,8 +204,9 @@
         </div>
     </footer>
 
-    <!-- Smooth Scroll Script -->
+    <!-- JavaScript -->
     <script>
+        // ---------------------Smooth Scroll Script---------------------
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -207,13 +216,18 @@
             });
         });
 
-        // Mobile Navigation
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+        // -----------------Side Navbar Hide Script-----------------
+        // Get all the anchor tags inside the navbar
+        const navLinks = document.querySelectorAll('.nav-link');
+        // Add a click event listener to each anchor tag
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Uncheck the nav-check checkbox to hide the sidebar
+                document.getElementById('nav-check').checked = false;
+            });
         });
+
+        
     </script>
 
 </body>
