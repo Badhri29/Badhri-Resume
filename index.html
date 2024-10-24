@@ -10,27 +10,45 @@
 
 <body>
 
-    <!-- Navigation Bar -->
-    <nav id="navbar">
-        <div class="container">
-            <h1 class="logo">G Badhrinarayanan</h1>
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#Course">Course</a></li>
-                <li><a href="#Experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+    <!-- Navigation Bar/Header Section -->
+     <section id="header">
+        <header>
+            <nav class="menu-btn">
+                <h1>G Badhrinarayanan</h1>
+                <label for="nav-check">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg>
+                </label>
+            </nav>
+        </header>
+        <input type="checkbox" id="nav-check">
+        <label for="nav-check" class="overlay"></label>
+        <nav class="navbar">
+            <div class="navbar-header">
+                <span class="nav-close">
+                    <label for="nav-check">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#e8eaed">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg>
+                    </label>
+                </span>
             </div>
-        </div>
-    </nav>
-
+            <ul class="navbarList">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#Course" class="nav-link">Course</a></li>
+                <li><a href="#Experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+     </section>
+     
     <!-- Hero Section -->
     <section id="hero">
         <div class="hero-content">
@@ -41,15 +59,6 @@
     </section>
 
     <!-- About Me Section -->
-    <!-- <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>
-                I’m a passionate developer with experience in building efficient and scalable web solutions. I specialize in front-end and back-end technologies and enjoy solving problems creatively.
-            </p>
-            <a href="#" class="btn">Download Resume</a>
-        </div>
-    </section> -->
     <section class="about" id="about">
         <div class="container">
             <h2>About Me</h2>
@@ -70,25 +79,6 @@
     </section>
 
     <!-- Skills Section -->
-    <!-- <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill">
-                    <h3>HTML / CSS</h3>
-                </div>
-                <div class="skill">
-                    <h3>Core Java</h3>
-                </div>
-                <div class="skill">
-                    <h3>MySQL</h3>
-                </div>
-                <div class="skill">
-                    <h3>JavaScript</h3>
-                </div>
-            </div>
-        </div>
-    </section> -->
     <section class="skills" id="skills">
         <div class="container">
             <h2>My Skills</h2>
@@ -144,7 +134,7 @@
         </div>
     </section>
 
-    <!-- Course -->
+    <!-- Course Section-->
      <section id="Course">
         <div class="container">
             <h2 class="CourseHeading">Course</h2>
@@ -168,7 +158,7 @@
         </div>
      </section>
 
-    <!-- Experience -->
+    <!-- Experience Section-->
      <section id="Experience">
         <div class="container">
             <h2>Experience</h2>
@@ -189,8 +179,7 @@
             <div class="contact-info">
                 <p>📞 Phone : <a href="tel:9600928195">96009 28195</a></p>
                 <p>✉️ Email : <a href="mailto:badhrinarayanan79@gmail.com">badhrinarayanan79@gmail.com</a></p>
-                <p>🔗 LinkedIn : <a href="https://www.linkedin.com/in/badhrinarayanan29"
-                        target="_blank">www.linkedin.com/in/badhrinarayanan29</a></p>
+                <p>🔗 LinkedIn : <a href="https://www.linkedin.com/in/badhrinarayanan29" target="_blank">https://www.linkedin.com/in/badhrinarayanan29</a></p>
                 <p>🔗 Website : <a href="https://badhri29.github.io/Badhri-Resume/" target="_blank">https://badhri29.github.io/Badhri-Resume/</a></p>
                 <p>🏠 Address : No-5, Barathi Street, NewRailway Station, Kanchipuram - 631502</p>
             </div>
@@ -201,7 +190,7 @@
     <footer>
         <p>&copy; 2024 G Badhrinarayanan</p>
         <div class="social-links">
-            <a href="#">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/badhrinarayanan29" target="_blank">LinkedIn</a>
             <a href="#">GitHub</a>
             <a href="#">Twitter</a>
         </div>
