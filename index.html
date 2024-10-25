@@ -39,14 +39,15 @@
                 </span>
             </div>
             <ul class="navbarList">
-                <li><a href="#hero" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#Course" class="nav-link">Course</a></li>
-                <li><a href="#Experience" class="nav-link">Experience</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#hero" class="nav-link"><span>Home</span></a></li>
+                <li><a href="#about" class="nav-link"><span>About</span></a></li>
+                <li><a href="#skills" class="nav-link"><span>Skills</span></a></li>
+                <li><a href="#projects" class="nav-link"><span>Projects</span></a></li>
+                <li><a href="#Course" class="nav-link"><span>Course</span></a></li>
+                <li><a href="#Experience" class="nav-link"><span>Experience</span></a></li>
+                <li><a href="#contact" class="nav-link"><span>Contact</span></a></li>
             </ul>
+
         </nav>
     </section>
 
@@ -227,6 +228,18 @@
             });
         });
 
+        document.querySelectorAll('.nav-link span').forEach(span => {
+            span.addEventListener('click', function () {
+                // Remove the class if it was previously added to reset animation
+                this.classList.remove('marquee');
+
+                // Force reflow to restart the animation
+                void this.offsetWidth;
+
+                // Add the class to trigger the animation
+                this.classList.add('marquee');
+            });
+        });
         
     </script>
 

@@ -24,7 +24,7 @@ a {
 }
 
 body {
-    background-color: var(--bg-color);
+    background-color: var(--bg-lightgray);
     color: var(--text-color);
     line-height: 1.6;
     scroll-behavior: smooth;
@@ -35,10 +35,9 @@ body {
     margin: 0 auto;
 }
 
-/*-------------------------- Navigation Bar-------------------------- */
+/*------------------------ Navigation Bar-------------------------- */
 header {
-    background-color: var(--bg-darkdray);
-    /* Example background color */
+    background-color: var(--bg-color);
     padding: 10px;
     position: fixed;
     top: 0;
@@ -98,6 +97,10 @@ header {
     display: none;
 }
 
+#nav-check:checked~.overlay {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.7);
+}
 /* ---------------------------- Navbar ---------------------------- */
 /* ******** Navbar Header ******** */
 .navbar {
@@ -107,27 +110,32 @@ header {
     right: 0;
     width: 100%;
     height: 100%;
-    transform: translateX(110%);
+    transform: translateX(300%);
     z-index: 1;
     /*syntax = transition: property, duration, timing-function, delay; */
-    transition: 0.6s ease;
+    transition: 1s cubic-bezier(0.88, 0.46, 0, 0.14);;
+    backdrop-filter: blur(5px);
 }
+
 .navbar-header {
     position: relative;
 }
+
 .nav-close {
     position: absolute;
     right: 15%;
     margin-top: 15px;
 }
+
 .nav-close svg {
     cursor: pointer;
     transition: all 0.3s linear;
     height: 32px;
     width: 32px;
 }
+
 .nav-close:hover svg {
-    fill : orange
+    fill: orange
 }
 
 /* ******** Navbar List ******** */
@@ -136,33 +144,52 @@ header {
     padding: 0;
     margin-top: 70px;
 }
-
 .nav-link {
+    width: 100%;
+    border: white 1px solid;
     display: block;
     color: white;
     text-transform: uppercase;
     font-size: 1.2rem;
     padding: 0.75rem 1rem;
     transition: all 0.3s linear;
-    /* background-color: rgba(255, 255, 255, 0.1); */
+    background-color: rgba(255, 255, 255, 0.051);
 }
 
 .nav-link:hover {
-    background-color: blanchedalmond;
-    color: black;
+    /* background-color: rgba(255, 235, 205, 0.273); */
     font-weight: bold;
     padding-left: 1.5rem;
-    border-left: 0.5rem solid orange;
+    border-left: 0.1rem solid orange;
 }
-
+.nav-link span.marquee {
+    display: inline-block; /* Ensure the span moves independently */
+    animation: marquee-text 2s linear;
+}
 @media screen and (min-width:300px) {
     .navbar {
-        width: 45%;
+        width: 55%;
         max-width: 25rem;
     }
 
 }
-
+@keyframes marquee-text {
+    0% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(700%);
+        
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.nav-link span{
+    width: 100%;
+    height: 100%;
+    border: white 1px solid;
+}
 /* ------------------------------ Hero Section ------------------------------ */
 #hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/myphoto.jpg) no-repeat center center/cover;
@@ -578,7 +605,7 @@ header {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: (--bg-color);
+    background-color: var(--bg-color);
 }
 
 footer p {
