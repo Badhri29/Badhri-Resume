@@ -435,7 +435,7 @@ header {
     flex-wrap: wrap;
     justify-content: center;
 }
-.projects-grid .project h3:hover {
+.project :hover h3 {
     color: var(--hover-color);
 }
 
