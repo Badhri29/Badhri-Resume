@@ -435,9 +435,10 @@ header {
     flex-wrap: wrap;
     justify-content: center;
 }
-.projects-grid:hover h3{
+.projects-grid .project h3:hover {
     color: var(--hover-color);
 }
+
 .project {
     background-color: var(--bg-darkdray);
     padding: 20px;
