@@ -445,11 +445,11 @@ header {
     max-width: 350px;
 }
 
-.project:hover li{
+.project:hover {
     transform: scale(1.05);
 }
 .project:hover h3 {
-    color: var(--hover-color);
+    color: #e65c00;
 }
 
 /*------------------------------ Course Section------------------------------ */
