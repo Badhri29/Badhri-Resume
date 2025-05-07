@@ -446,10 +446,14 @@ header {
 }
 
 .project:hover {
+    border: wheat 1px solid;
+}
+.project:hover p{
+    transition: transform 0.5s ease;
     transform: scale(1.05);
 }
 .project:hover h3 {
-    color: #e65c00;
+    color: var(--hover-color);
 }
 
 /*------------------------------ Course Section------------------------------ */
